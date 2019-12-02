@@ -6,9 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>One day in Bremen</title>
-    <script src="https://kit.fontawesome.com/b1c25c50a2.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="main.css">
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,600&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/b1c25c50a2.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
@@ -21,9 +21,12 @@
             <div class="bar"></div>
         </div>
         <ul id="menu-list">
-            <li><a href="">welcome</a></li>
-            <li><a href="">day</a></li>
-            <li><a href="">night</a></li>
+            <li><a href="">Welcome</a></li>
+            <li><a href="">City centre</a></li>
+            <li><a href="">Musicians</a></li>
+            <li><a href="">Schnoor</a></li>
+            <li><a href="">Werder Bremen</a></li>
+            <li><a href="">Bremer night</a></li>
         </ul>
     </nav>
     <main>
@@ -46,9 +49,7 @@
             and the awesome town hall belong to UNESCO World Heritage!
         </p>
     </section>
-    <div class="parallax">
-
-    </div>
+    <div class="parallax city-centre"></div>
     <section class="text">
         <h2>Bremen Town Musicians</h2>
         <p>
@@ -56,9 +57,7 @@
             Grimm? Say hi to the Bremen Town Musicians.
         </p>
     </section>
-    <div class="parallax">
-
-    </div>
+    <div class="parallax musicians"></div>
     <section class="text">
         <h2>Schnoor</h2>
         <p>
@@ -67,9 +66,7 @@
             local shops.
         </p>
     </section>
-    <div class="parallax">
-
-    </div>
+    <div class="parallax schnoor"></div>
     <section class="text-with-photo">
         <h2>Bock auf ein Bierchen?</h2>
         <p>
@@ -84,13 +81,13 @@
             watch a match there. The atmosphere will amaze you. And luckily they even win a match…
         </p>
     </section>
-    <div class="parallax">
+    <div class="parallax weserstadion">
 
     </div>
-    <section class="text-with-photo">
+    <section id="night" class="text-with-photo">
         <h2>Still fit?</h2>
         <p>
-            Night is young, so take a walk in Viertel and mix with the most hipster neighborhood in the city. If you
+            The night is young, so take a walk in Viertel and mix with the most hipster neighborhood in the city. If you
             still have power, there are some cool discos to visit.
         </p>
         <img src="img/viertel.jpg" alt="">
@@ -100,12 +97,15 @@
         <img src="img/lilaeule.jpg" alt="">
     </section>
     <footer>
+        <div class="go-up">
+            <i class="fas fa-arrow-up"></i>
+        </div>
         &copy; made with <i class="fas fa-heart"></i> by Jaime Segura
     </footer>
     <script>
         const openMenu = () => {
             const toggleBar = document.getElementById("menu-list");
-            return toggleBar.style.display === "none" ? toggleBar.style.display = "flex" : toggleBar.style.display = "none";
+            return toggleBar.style.display === "flex" ? toggleBar.style.display = "none" : toggleBar.style.display = "flex";
         }
     </script>
 </body>
