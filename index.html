@@ -8,16 +8,22 @@
     <title>One day in Bremen</title>
     <script src="https://kit.fontawesome.com/b1c25c50a2.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="main.css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,600&display=swap" rel="stylesheet">
 </head>
 
 <body>
 
     <nav>
         <span>#OneDayBremen</span>
-        <ul>
-            <li>welcome</li>
-            <li>day</li>
-            <li>night</li>
+        <div class="open-button" onclick="openMenu()">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </div>
+        <ul id="menu-list">
+            <li><a href="">welcome</a></li>
+            <li><a href="">day</a></li>
+            <li><a href="">night</a></li>
         </ul>
     </nav>
     <main>
@@ -91,6 +97,12 @@
     <footer>
         &copy; made with <i class="fas fa-heart"></i> by Jaime Segura
     </footer>
+    <script>
+        const openMenu = () => {
+            const toggleBar = document.getElementById("menu-list");
+            return toggleBar.style.display === "none" ? toggleBar.style.display = "flex" : toggleBar.style.display = "none";
+        }
+    </script>
 </body>
 
 </html>
