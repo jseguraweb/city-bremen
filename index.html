@@ -15,18 +15,14 @@
 
     <nav>
         <span><a href="#">#OneDayBremen</a></span>
-        <div class="open-button" onclick="openMenu()">
-            <div class="bar"></div>
-            <div class="bar"></div>
-            <div class="bar"></div>
-        </div>
+        <i class="fas fa-hamburger open-button" onclick="toggleMenu()"></i>
         <ul id="menu-list">
-            <li><a href="">Welcome</a></li>
-            <li><a href="">City centre</a></li>
-            <li><a href="">Musicians</a></li>
-            <li><a href="">Schnoor</a></li>
-            <li><a href="">Werder Bremen</a></li>
-            <li><a href="">Bremer night</a></li>
+            <li><a href="#welcome" onclick="toggleMenu()">Welcome</a></li>
+            <li><a href="#city" onclick="toggleMenu()">City centre</a></li>
+            <li><a href="#animals" onclick="toggleMenu()">Musicians</a></li>
+            <li><a href="#medieval" onclick="toggleMenu()">Schnoor</a></li>
+            <li><a href="#werder" onclick="toggleMenu()">Werder Bremen</a></li>
+            <li><a href="#night" onclick="toggleMenu()">Bremer night</a></li>
         </ul>
     </nav>
     <main>
@@ -34,7 +30,7 @@
             <h1>One day in Bremen</h1>
         </div>
     </main>
-    <section class="text-with-photo">
+    <section id="welcome" class="text-with-photo">
         <h2>Welcome to the north of Germany</h2>
         <p>
             Bremen's first train station was opened in 1847 on the site of today's station, on the line to Hanover.
@@ -42,7 +38,7 @@
         </p>
         <img src="img/hauptbahnhof.jpg" alt="bremer train station">
     </section>
-    <section class="text">
+    <section id="city" class="text">
         <h2>City centre</h2>
         <p>
             After a 10 minutes walk you’re in the city centre. It’s time to take out your camera: the Bremen’s Roland
@@ -50,7 +46,7 @@
         </p>
     </section>
     <div class="parallax city-centre"></div>
-    <section class="text">
+    <section id="animals" class="text">
         <h2>Bremen Town Musicians</h2>
         <p>
             Closeby you’ll find the most popular and obligatory photo. Do you remember the fairytale by the Brothers
@@ -58,7 +54,7 @@
         </p>
     </section>
     <div class="parallax musicians"></div>
-    <section class="text">
+    <section id="medieval" class="text">
         <h2>Schnoor</h2>
         <p>
             Don’t forget to visit the Schnoor quarter. You can take a short walk into that medieval old town and visit
@@ -74,7 +70,7 @@
         </p>
         <img src="img/schuettinger.jpg" alt="">
     </section>
-    <section class="text">
+    <section id="werder" class="text">
         <h2>Grün-weiße Liebe</h2>
         <p>
             Maybe you visit the city in a Bundesliga weekend and Werder is playing home. I definitely recommend you to
@@ -98,12 +94,12 @@
     </section>
     <footer>
         <div class="go-up">
-            <i class="fas fa-arrow-up"></i>
+            <a href="#"><i class="fas fa-arrow-up"></i></a>
         </div>
         &copy; made with <i class="fas fa-heart"></i> by Jaime Segura
     </footer>
     <script>
-        const openMenu = () => {
+        const toggleMenu = () => {
             const toggleBar = document.getElementById("menu-list");
             return toggleBar.style.display === "flex" ? toggleBar.style.display = "none" : toggleBar.style.display = "flex";
         }
